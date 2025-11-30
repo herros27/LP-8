@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "620020828488",
+    "firebase_url": "https://baselp-8-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "baselp-8",
+    "storage_bucket": "baselp-8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:620020828488:android:3f46e3422422de95d74b7d",
+        "android_client_info": {
+          "package_name": "com.asisten.lp_8"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKGX2V7DZLOjLwNG-EYE_EH3ZYgNxxHzE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
