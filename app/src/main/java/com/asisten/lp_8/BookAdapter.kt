@@ -5,25 +5,32 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.asisten.lp_8.databinding.ItemBookBinding
 
 class BookAdapter(private val books: List<Book>) :
     RecyclerView.Adapter<BookAdapter.BookViewHolder>() {
 
-    class BookViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tvTitle: TextView = itemView.findViewById(R.id.tvTitle)
-        val tvRelease: TextView = itemView.findViewById(R.id.tvRelease)
+    class BookViewHolder(private val binding: ItemBookBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(book: Book){
+            binding.tvTitle.text = book.title
+            binding.tvRelease.text = book.releaseDate
+
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BookViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_book, parent, false)
-        return BookViewHolder(view)
+        val binding = ItemBookBinding.inflate(
+            LayoutInflater.from(parent.context),
+            parent,
+            false
+        )
+        return BookViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: BookViewHolder, position: Int) {
         val book = books[position]
-        holder.tvTitle.text = book.title
-        holder.tvRelease.text = "Released: ${book.releaseDate}"
+        holder.bind(book)
     }
 
     override fun getItemCount() = books.size
