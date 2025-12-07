@@ -14,9 +14,10 @@ Ikuti langkah-langkah berikut untuk menghubungkan aplikasi ke Firebase milik And
 3. Matikan *Google Analytics* (opsional, agar setup lebih cepat), lalu klik **Create Project**.
 
 ### Langkah 3: Daftarkan Aplikasi Android
-1. Di halaman dashboard project Firebase, klik ikon **Android** (logo robot hijau).
-2. **Android package name**: Tempelkan `applicationId` yang Anda catat di Langkah 1.
-3. Klik **Register app**.
+1. Buka Project Settings.
+2. Di bagian general scroll ke bawah, kan ada your apps, terus add app.
+3. **Android package name**: Tempelkan `applicationId` yang Anda catat di Langkah 1.
+4. Klik **Register app**.
 
 ### Langkah 4: Tambahkan `google-services.json` (PENTING!)
 1. Download file **`google-services.json`** yang diberikan oleh Firebase.
